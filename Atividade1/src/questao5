@@ -1,0 +1,2 @@
+Sobre é basicamente a duplicação de um método na mesma classe mas necessariamente, com argumentos diferentes para o funcionamento. 
+Já a Sobreposição é a reescrita de um método em uma subclasse com comportamento diferente da superclasse mantendo o nome e assinaturado método.

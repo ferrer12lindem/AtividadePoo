@@ -1,0 +1,44 @@
+package questao3;
+import java.util.List;
+import java.util.ArrayList;
+
+public class Poligono {
+	
+	List<Ponto> pontos;
+	private int x;
+	private int y;
+	private int poli ;
+	
+	public Poligono(){
+		this.pontos = new ArrayList<Ponto>();
+	}
+	
+	public Poligono(List<Ponto> pontos){
+		this.pontos = pontos;
+	}
+	
+	public void adicionaPonto(Ponto p){
+		pontos.add(p);
+	}
+	
+	public void removePonto(String nome){
+		pontos.remove(nome);
+	}
+	
+	public List<Ponto> getPonto(){
+		return this.pontos;
+	}
+	
+	public int calcPoligono(int poli){
+		int area = 0;
+		for(int k=0; k<pontos.size(); k++){
+			area += k;
+		}
+	return area;
+	}
+	
+	public String toString(int poli){
+		return "Resultado dos cálculos: "+calcPoligono(poli);
+	}
+
+}

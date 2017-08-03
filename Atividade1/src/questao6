@@ -1,0 +1,8 @@
+Classes abstratas é um tipo bem específico, que funciona como herança para outras classes que estas 
+necessariamente à herdam, elas não podem ser instanciadas e podem-se constituir de métodos abstratos que não tem corpos, e interfaces é uma entidade, que não possui nenhuma implementação somente assinaturas, todos os seus métodos 
+são implicitamente públicos e abstratos e funcionam através de um tipo de contrato com as classes que à 
+implementam e as interfaces também não podem ser instanciadas. 
+Usamos Interface quando queremos evitar alto acoplamento, quando que classes implementadas tenhma métodos em comum
+à fim de que possamos acessá-los através de uma única variável, e quando for o caso de classes abstratas à usamos quando
+basicamente queremos como herança métodos "concretos" que satisfazem certas necessidades e deficiência buscamos implementar 
+alguns métodos essenciais que não podemos com interfaces.
