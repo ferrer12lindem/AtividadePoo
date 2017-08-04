@@ -17,8 +17,9 @@ public class Main {
 		System.out.printf("Perímetro de retangle: %.2f\n" ,periReta);
 		System.out.printf("Área de retangle: %.2f\n",areaReta);
 		
-		boolean var = reta.equals(altura);
-		System.out.println("Vendo se é igual... "+var);
+		Retangulo o = new Retangulo(altura, largura);
+		boolean var = reta.equals(o);
+		System.out.println("Comparação... "+var);
 		
 		System.out.println("Informações: "+reta.toString());
 		leitor.close();

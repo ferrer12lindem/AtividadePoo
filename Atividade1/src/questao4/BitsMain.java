@@ -10,20 +10,34 @@ public class BitsMain {
 		System.out.print("Digite o tamanho do array: ");
 		int tamArray = Integer.parseInt(leitor.nextLine());
 
-		for (int k = 0; k < tamArray; k++) {
-
-			System.out.print("Digite o bit: ");
-			boolean bites = leitor.nextLine() != null;
-			Bit bit = new Bit(tamArray);
-			System.out.println(bit.opeAND(bites));
-            
-			System.out.print("Digite o bit: ");
-			bit.opeOR(bites);
+			Bit bit = new Bit(43);
+			Bit b = new Bit(tamArray);
+			System.out.println("toString: "+b.toString());	
 			
-			System.out.print("Digite o bit: ");
-			bit.opeNOT(bites);
+			try {
+				System.out.println(b.opeAND(new Bit(7)));
+			} catch (TamDeBitException e) {
+				System.out.print(e.getMessage());
+				e.printStackTrace();
+			}
+			
+			System.out.println("Operação OR...");
+			try {
+				b.opeOR(bit);
+			} catch (TamDeBitException e) {
+				System.out.print(e.getMessage());
+				e.printStackTrace();
+			}
 
+			System.out.println("Operação NOT...");
+			try {
+				b.opeNOT(bit);
+			} catch (TamDeBitException e) {
+				e.getMessage();
+				e.printStackTrace();
+			}
+					
+			System.out.print("Comparando com equals: "+b.equals(bit));
 		leitor.close();
 		}
-	}
 }

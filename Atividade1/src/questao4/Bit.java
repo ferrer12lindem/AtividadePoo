@@ -1,7 +1,5 @@
 package questao4;
 
-import java.util.List;
-
 public class Bit {
 
 	private boolean[] bits;
@@ -9,6 +7,7 @@ public class Bit {
 
 	public Bit(int tamArray) {
 		this.tamArray = tamArray;
+		this.bits = new boolean[tamArray];
 	}
 
 	// public boolean[] getBits(){
@@ -19,38 +18,69 @@ public class Bit {
 	// this.bits = bits;
 	// }
 
-	public boolean getAcessaBit(int index) throws BitNaoExisteException {
-		for(int k=0; k<bits.length; k++){
-		if(bits[k] != true && bits[k] != false){
-			throw new BitNaoExisteException("Não existe mais bit");			
-		    }
-		}
-		return bits[index];			
-    }
+	public boolean getAcessaBit(int index) {
+		return this.bits[index];
+	}
 
 	public void setAcessaBit(boolean bit, int index) {
 		this.bits[index] = bit;
 	}
-	
-	public boolean opeAND(boolean index){ // &&
-		for(int k=0; k<bits.length; k++){
-			if(bits[k] == true && bits[k-1] == false){
-			    return false;	
+
+	public Bit opeAND(Bit b) throws TamDeBitException { // &&
+		Bit resp = new Bit(bits.length);
+		if (bits.length != b.getBits().length) {
+			for (int k = 0; k < bits.length; k++) {
+				bits[k] = bits[k] && b.getBits()[k];
+				throw new TamDeBitException("O tamanho do array tá o mesmo\n!");
+			}
+			for (int k = 0; k < bits.length; k++) {
+				resp.getBits()[k] = bits[k] && b.getBits()[k];
 			}
 		}
-		return true;
+		return resp;
 	}
-	
-	public boolean opeOR(boolean bites){ // ||
-		return false;
 
+	private boolean[] getBits() {
+		return this.bits;
 	}
-	
-	public boolean opeNOT(boolean bites){// !
-		return false;
+
+	public Bit opeOR(Bit b) throws TamDeBitException { // ||
+		Bit resp = new Bit(bits.length);
+		if (bits.length != b.getBits().length) {
+			for (int k = 0; k < bits.length; k++) {
+				bits[k] = bits[k] && b.getBits()[k];
+				throw new TamDeBitException("Mesmo tamanho de array\n!");
+			}
+			for (int k = 0; k < bits.length; k++) {
+				resp.getBits()[k] = bits[k] && b.getBits()[k];
+			}
+		}
+		return resp;
+	}
+
+	public Bit opeNOT(Bit b) throws TamDeBitException {// !
+		Bit resp = new Bit(bits.length);
+		if (bits.length != b.getBits().length) {
+			for (int k = 0; k < bits.length; k++) {
+				bits[k] = bits[k] && b.getBits()[k];
+				throw new TamDeBitException("É o mesmo tamanho!\n");
+			}
+			for (int k = 0; k < bits.length; k++) {
+				resp.getBits()[k] = bits[k] && b.getBits()[k];
+			}
+		}
+		return resp;
 	}
 
 	public String toString() {
-		return "Array de bits: " + bits;
+		String resp = "";
+		if (bits.length != 0) {
+			for (int k = 0; k < bits.length; k++) {
+				resp = "Array de bits: " + bits[k];
+			}
+		} else {
+			resp = "Array é nulo!";
+		}
+		return resp;
 	}
 }

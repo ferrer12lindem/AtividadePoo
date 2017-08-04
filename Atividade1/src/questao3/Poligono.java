@@ -29,8 +29,8 @@ public class Poligono {
 		return this.pontos;
 	}
 	
-	public int calcPoligono(int poli){
-		int area = 0;
+	public int calcPoligono(List<Ponto> pontos){
+		int area = 1;
 		for(int k=0; k<pontos.size(); k++){
 			area += k;
 		}
@@ -38,7 +38,7 @@ public class Poligono {
 	}
 	
 	public String toString(int poli){
-		return "Resultado dos cálculos: "+calcPoligono(poli);
+		return "Resultado dos cálculos: "+calcPoligono(pontos);
 	}
 
 }
