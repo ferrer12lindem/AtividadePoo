@@ -19,4 +19,8 @@ public class Circulo implements FormaGeometrica{
 	public int areaForma(){
 		return 0;
 	}
+	
+	public String toString(){
+		return "";
+	}
 }

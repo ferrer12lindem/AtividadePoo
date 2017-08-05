@@ -6,4 +6,11 @@ public class Quadrado extends Quadrilatero{
 	super(altura);
 	
 	}
+
+	@Override
+	public int areaForma() {
+		int area = 0;
+		
+		return area;
+	}
 }

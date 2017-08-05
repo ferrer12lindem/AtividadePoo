@@ -69,12 +69,18 @@ public class Pessoa {
 		return resp;
 	}
 
-	public boolean equals(String nome) {
-		if (nome == getNome()) {
-			return true;
-		} else {
+	public boolean equals(Object o) {
+		if (o == null) {
+			return false;
+		} 
+		if(o instanceof Pessoa){
+			Pessoa p = (Pessoa) o;
+			if(this.altura == p.getAltura() && this.idade == p.getIdade() && this.nome == p.getNome() && this.peso == p.getPeso() && this.sexo == p.getSexo()){
+				return true;
+			}
 			return false;
 		}
+		return false;
 	}
 
 	public String toString() {

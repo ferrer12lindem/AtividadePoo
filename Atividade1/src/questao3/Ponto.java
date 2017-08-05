@@ -31,12 +31,18 @@ public class Ponto {
 		this.y = y;
 	}
 
-	public boolean equals() {
-		if (x == y) {
-			return true;
-		} else {
+	public boolean equals(Object o) {
+		if (o == null) {
 			return false;
+			
+		}if(o instanceof Ponto){
+			Ponto p = (Ponto) o;
+			if(this.x == p.getX() && this.y == p.getY()){
+				return true;
+			}
+		    return false;
 		}
+	    return false;
 	}
 
 	public String toString() {

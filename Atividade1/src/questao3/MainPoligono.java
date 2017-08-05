@@ -15,6 +15,6 @@ public class MainPoligono {
 		pontos.add(ponto);
 		pontos.add(ponto1);
 		pontos.add(ponto2);
-		System.out.println(poligono.toString());
+		System.out.println("Vendo a equidade de objetos..."+poligono.toString());
 	}
 }

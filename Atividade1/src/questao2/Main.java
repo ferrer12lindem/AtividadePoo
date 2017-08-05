@@ -16,7 +16,7 @@ public class Main {
 		String sexo = "Masculino";
 		Pessoa p = new Pessoa(nome, idade, altura, peso , sexo);
 		
-		System.out.println("Vendo se tem equidade... "+p.equals(nome));
+		System.out.println("Vendo se tem equidade...\n "+p.equals(nome));
 		System.out.printf("Informações:\n"+p.toString());
 		leitor.close();
 	}

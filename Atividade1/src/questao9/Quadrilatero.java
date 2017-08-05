@@ -33,11 +33,4 @@ public abstract class Quadrilatero implements FormaGeometrica {
 		int result = this.ladoE+this.acima+this.ladoD+this.abaixo;
 		return result;
 	}
-
-	@Override
-	public int areaForma() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
 }
