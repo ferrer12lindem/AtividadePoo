@@ -48,11 +48,11 @@ public class Bit {
 		Bit resp = new Bit(bits.length);
 		if (bits.length != b.getBits().length) {
 			for (int k = 0; k < bits.length; k++) {
-				bits[k] = bits[k] && b.getBits()[k];
+				bits[k] = bits[k] || b.getBits()[k];
 				throw new TamDeBitException("Mesmo tamanho de array\n!");
 			}
 			for (int k = 0; k < bits.length; k++) {
-				resp.getBits()[k] = bits[k] && b.getBits()[k];
+				resp.getBits()[k] = bits[k] || b.getBits()[k];
 			}
 		}
 		return resp;
@@ -62,7 +62,7 @@ public class Bit {
 		Bit resp = new Bit(bits.length);
 		if (bits.length != b.getBits().length) {
 			for (int k = 0; k < bits.length; k++) {
-				bits[k] = bits[k] && b.getBits()[k];
+				bits[k] = !(b.getBits()[k]);
 				throw new TamDeBitException("É o mesmo tamanho!\n");
 			}
 			for (int k = 0; k < bits.length; k++) {
