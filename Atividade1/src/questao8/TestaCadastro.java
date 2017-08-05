@@ -46,7 +46,6 @@ public class TestaCadastro {
 		String ger3 = leitor.nextLine();
 		Pessoa gerente3 = new Gerente("Setor de serviços", 2900, ger3);
 		Gerente g = new Gerente("RH1", 1400, "Manoel");
-		Funcionario f = g;
 
 		leitor.close();
 		c.cadastraPessoa(cliente1);
@@ -61,7 +60,7 @@ public class TestaCadastro {
 		list.add(c);
 		if (c instanceof CadastroPessoas) {
 			for (int k = 0; k < list.size(); k++) {
-				System.out.println("Impressões: " + k);
+				System.out.println("Imprimindo "+k);
 			}
 		}
 

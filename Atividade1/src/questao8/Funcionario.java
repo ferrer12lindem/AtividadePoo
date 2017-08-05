@@ -15,6 +15,6 @@ public class Funcionario extends Pessoa{
 	}
 	
 	public void imprimeDados(){
-		System.out.println("");
+		System.out.println("Nome: "+this.nome+"\nSalário: "+this.salario+"\nImposto de renda: "+this.calculaImposto());
 	}
 }

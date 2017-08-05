@@ -14,6 +14,10 @@ public class Gerente extends Funcionario {
 	}
 	
 	public void imprimeDados(){
-		System.out.println("Área: "+this.area);
+		System.out.println("Salário: "+this.salario+"\nÁrea: "+this.area+"\nImposto de renda: "+calculaImposto());
 	}
+	
+//	public String toString(){
+//		return "Salário: "+this.salario+" Imposto de renda: "+calculaImposto();
+//	}
 }

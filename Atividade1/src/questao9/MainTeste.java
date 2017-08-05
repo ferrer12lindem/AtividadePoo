@@ -24,6 +24,7 @@ public class MainTeste {
     vetor.add(reta2);
     vetor.add(quadra1);
     vetor.add(quadra2);
+    System.out.println("Imprime: "+k.toString());
        }
     }
 }

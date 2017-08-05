@@ -16,6 +16,7 @@ public class Cliente extends Pessoa{
     }
     
     public void imprimeDados(){
-    	System.out.println();
+    	Cliente p = new Cliente();
+    	System.out.println("Nome: "+nome+" Código: "+codigo);
     }
 }
