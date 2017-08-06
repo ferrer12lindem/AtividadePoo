@@ -38,7 +38,11 @@ public class Poligono {
 	}
 	
 	public String toString(int poli){
-		return "Resultado dos cálculos: "+calcPoligono(pontos);
+		String msg = null;
+		for(Ponto p: pontos){
+		    msg ="Resultado dos cálculos: "+p.toString(); // questao3.Poligono@6bc7c054
+		}
+	return msg;
 	}
 
 }

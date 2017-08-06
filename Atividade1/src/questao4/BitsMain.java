@@ -11,11 +11,11 @@ public class BitsMain {
 		int tamArray = Integer.parseInt(leitor.nextLine());
 
 			Bit bit = new Bit(43);
-			Bit b = new Bit(tamArray);
-			System.out.println("toString: "+b.toString());	
+			Bit b = new Bit(tamArray);	
 			
 			try {
-				System.out.println(b.opeAND(new Bit(7)));
+				System.out.println("Operação AND...");
+				System.out.println(b.opeAND(bit));
 			} catch (TamDeBitException e) {
 				System.out.print(e.getMessage());
 				e.printStackTrace();
@@ -23,21 +23,25 @@ public class BitsMain {
 			
 			System.out.println("Operação OR...");
 			try {
-				b.opeOR(bit);
+				Bit b2 = new Bit(tamArray); 
+				System.out.println(b2.opeOR(bit));
 			} catch (TamDeBitException e) {
 				System.out.print(e.getMessage());
 				e.printStackTrace();
 			}
 
 			System.out.println("Operação NOT...");
+			Bit b3 = new Bit(tamArray) ;
 			try {
-				b.opeNOT(bit);
+				System.out.println(b3.opeNOT(bit));
 			} catch (TamDeBitException e) {
 				e.getMessage();
 				e.printStackTrace();
 			}
 					
-			System.out.print("Comparando com equals: "+b.equals(bit));
+			System.out.println("Comparando com equals: "+b.equals(bit)+"\n");
+			
+			System.out.println("toString: "+b.toString());
 		leitor.close();
 		}
 }

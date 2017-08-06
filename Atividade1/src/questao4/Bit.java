@@ -66,7 +66,7 @@ public class Bit {
 				throw new TamDeBitException("É o mesmo tamanho!\n");
 			}
 			for (int k = 0; k < bits.length; k++) {
-				resp.getBits()[k] = bits[k] && b.getBits()[k];
+				resp.getBits()[k] = !(b.getBits()[k]);
 			}
 		}
 		return resp;

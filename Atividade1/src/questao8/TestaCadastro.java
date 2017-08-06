@@ -10,7 +10,6 @@ public class TestaCadastro {
 
 		Scanner leitor = new Scanner(System.in);
 
-		CadastroPessoas c = new CadastroPessoas();
 		List<CadastroPessoas> list = new ArrayList<CadastroPessoas>();
 
 		// Cliente
@@ -38,31 +37,39 @@ public class TestaCadastro {
 		// Gerente
 		System.out.print("Digite o nome do gerente 1: ");
 		String ger1 = leitor.nextLine();
-		Pessoa gerente1 = new Gerente("Área de finanças", 4500, ger1);
+		Funcionario gerente1 = new Gerente("Área de finanças", 4500, ger1);
 		System.out.print("Digite o nome do gerente 2: ");
 		String ger2 = leitor.nextLine();
-		Pessoa gerente2 = new Gerente("RH", 3800, ger2);
+		Funcionario gerente2 = new Gerente("RH", 3800, ger2);
 		System.out.print("Digite o nome do gerente 3: ");
 		String ger3 = leitor.nextLine();
-		Pessoa gerente3 = new Gerente("Setor de serviços", 2900, ger3);
-		Gerente g = new Gerente("RH1", 1400, "Manoel");
+		Funcionario gerente3 = new Gerente("Setor de serviços", 2900, ger3);
+		for(CadastroPessoas c : list){
 
-		leitor.close();
-		c.cadastraPessoa(cliente1);
-		c.cadastraPessoa(cliente2);
-		c.cadastraPessoa(cliente3);
-		c.cadastraPessoa(funcionario1);
-		c.cadastraPessoa(funcionario2);
-		c.cadastraPessoa(funcionario3);
-		c.cadastraPessoa(gerente1);
-		c.cadastraPessoa(gerente2);
-		c.cadastraPessoa(gerente3);
+			c.cadastraPessoa(cliente1);
+			c.cadastraPessoa(cliente2);
+			c.cadastraPessoa(cliente3);
+			c.cadastraPessoa(funcionario1);
+			c.cadastraPessoa(funcionario2);
+			c.cadastraPessoa(funcionario3);
+			c.cadastraPessoa(gerente1);
+			c.cadastraPessoa(gerente2);
+			c.cadastraPessoa(gerente3);
+
 		list.add(c);
-		if (c instanceof CadastroPessoas) {
-			for (int k = 0; k < list.size(); k++) {
-				System.out.println("Imprimindo "+k);
-			}
 		}
+		
+		cliente1.imprimeDados();
+		cliente2.imprimeDados();
+		cliente3.imprimeDados();
+		funcionario1.imprimeDados();
+		funcionario2.imprimeDados();
+		funcionario3.imprimeDados();
+		gerente1.imprimeDados();
+		gerente2.imprimeDados();
+		gerente3.imprimeDados();
 
+		
+	leitor.close();
 	}
 }

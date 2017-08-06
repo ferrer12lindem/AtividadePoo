@@ -1,6 +1,7 @@
 package questao9;
 
 import java.util.List;
+import java.util.ArrayList;
 
 public class Geometria {
 
@@ -12,7 +13,8 @@ public class Geometria {
 	public Geometria(Retangulo retangle, Quadrado quadra, Circulo circle){
 		this.retangle = retangle;
 		this.quadra = quadra;
-		this.circle = circle;	
+		this.circle = circle;
+		this.list = new ArrayList<Geometria>();
 	}
 	
 }

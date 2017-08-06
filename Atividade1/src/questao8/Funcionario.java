@@ -10,11 +10,19 @@ public class Funcionario extends Pessoa{
 		this.salario = salario;
 	}
 	
+	public Funcionario(){
+		
+	}
+	
 	public float calculaImposto(){
 		return (float) (0.3*salario);
 	}
 	
 	public void imprimeDados(){
-		System.out.println("Nome: "+this.nome+"\nSalário: "+this.salario+"\nImposto de renda: "+this.calculaImposto());
+		System.out.println("Funcionário:\n\nNome: "+this.nome+"\nSalário: "+this.salario+"\nImposto de renda: "+this.calculaImposto()+"\n");
+	}
+	
+	public String toString(){
+		return "Funcionário:\n\nNome: "+this.nome+"\nSalário: "+this.salario+"\nImposto de renda: "+this.calculaImposto();
 	}
 }

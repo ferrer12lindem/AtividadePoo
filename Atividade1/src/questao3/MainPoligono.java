@@ -7,7 +7,7 @@ public class MainPoligono {
 	public static void main(String[] args){
 		
 		List<Ponto> pontos = new ArrayList<Ponto>();
-		Poligono poligono = new Poligono(pontos);
+		Poligono poligono = new Poligono();
 		Ponto ponto = new Ponto(3, 6);
 		Ponto ponto1 = new Ponto(2, 8);
 		Ponto ponto2 = new Ponto(12, 67);
@@ -15,6 +15,6 @@ public class MainPoligono {
 		pontos.add(ponto);
 		pontos.add(ponto1);
 		pontos.add(ponto2);
-		System.out.println("Vendo a equidade de objetos..."+poligono.toString());
+		System.out.println("Imprimindo..."+poligono.toString());
 	}
 }
