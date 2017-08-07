@@ -18,10 +18,10 @@ public class BitsMain {
 		try {
 			Bit bb = new Bit(tamArray);
 			System.out.println("\nOperação AND...\n");
-			for (int k = 0; k <= tamArray; k++) {
-				System.out.println("Digite o próximo bit: ");
+			for (int k = 0; k < tamArray; k++) {
+				System.out.println("Digite o primeiro bit: ");
 				b.setBits1(leitor.nextBoolean());
-				System.out.println("Digite o próximo bit: ");
+				System.out.println("Digite o segundo bit: ");
 				b.setBits2(leitor.nextBoolean());
 				bit.add(b);
 			System.out.println("Imprimindo..." + bb.opeAND(b));
@@ -38,10 +38,10 @@ public class BitsMain {
 		try {
 			List<Bit> bt = new ArrayList<Bit>();
 			Bit b2 = b.opeOR(b);
-			for (int k = 0; k <= tamArray; k++) {
-				System.out.println("Digite o próximo bit: ");
+			for (int k = 0; k < tamArray; k++) {
+				System.out.println("Digite o primeiro bit: ");
 				b.setBits1(leitor.nextBoolean());
-				System.out.println("Digite o próximo bit: ");
+				System.out.println("Digite o segundo bit: ");
 				b.setBits2(leitor.nextBoolean());
 			System.out.println("Imprimindo..." + b2);	
 			}
@@ -55,8 +55,8 @@ public class BitsMain {
 		System.out.println("\nOperação NOT...");
 		try {
 			Bit b3 = b.opeNOT(b);
-			for (int k = 0; k <= tamArray; k++) {
-				System.out.println("Digite o próximo bit: ");
+			for (int k = 0; k < tamArray; k++) {
+				System.out.println("Digite o bit: ");
 				b.setBits1(leitor.nextBoolean());
 				bit.add(b);
 			System.out.println("Imprimindo..." + b3);
@@ -67,7 +67,7 @@ public class BitsMain {
 			e.printStackTrace();
 		}
 
-		System.out.println("\nComparando com equals: " + b.equals(bit) + "\n");
+		System.out.println("\n\nComparando do equals: " + b.equals(bit) + "\n");
 
 //		System.out.println("toString: " + b.toString());
 		leitor.close();
