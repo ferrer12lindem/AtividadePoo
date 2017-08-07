@@ -33,16 +33,13 @@ public class Bit {
 	}
 
 	public Bit opeAND(Bit b) throws TamDeBitException { // &&
-		Bit resp = new Bit(bits.length);
 		if (bits.length != b.getBits().length) {
-			for (int k = 0; k < bits.length; k++) {
-				bits[k] = bits[k] && b.getBits()[k];
 				throw new TamDeBitException("O tamanho do array tá o mesmo\n!");
 			}
+			Bit resp = new Bit(bits.length);
 			for (int k = 0; k < bits.length; k++) {
 				resp.getBits()[k] = bits[k] && b.getBits()[k];
 			}
-		}
 		return resp;
 	}
 
@@ -51,30 +48,24 @@ public class Bit {
 	}
 
 	public Bit opeOR(Bit b) throws TamDeBitNaoException { // ||
-		Bit resp = new Bit(bits.length);
 		if (bits.length != b.getBits().length) {
-			for (int k = 0; k < bits.length; k++) {
-				bits[k] = bits[k] || b.getBits()[k];
 				throw new TamDeBitNaoException("Mesmo tamanho de array\n!");
 			}
+		Bit resp = new Bit(bits.length);
 			for (int k = 0; k < bits.length; k++) {
 				resp.getBits()[k] = bits[k] || b.getBits()[k];
-			}
 		}
 		return resp;
 	}
 
 	public Bit opeNOT(Bit b) throws TamDeBitSimException {// !
-		Bit resp = new Bit(bits.length);
 		if (bits.length != b.getBits().length) {
-			for (int k = 0; k < bits.length; k++) {
-				bits[k] = !(b.getBits()[k]);
 				throw new TamDeBitSimException("É o mesmo tamanho!\n");
 			}
+			Bit resp = new Bit(bits.length);
 			for (int k = 0; k < bits.length; k++) {
 				resp.getBits()[k] = !(b.getBits()[k]);
 			}
-		}
 		return resp;
 	}
 
