@@ -4,6 +4,7 @@ public class Bit {
 
 	private boolean[] bits;
 	private int tamArray;
+	private boolean bit;
 
 	public Bit(int tamArray) {
 		this.tamArray = tamArray;
@@ -14,6 +15,14 @@ public class Bit {
 	// public void setBits(boolean[] bits){
 	// this.bits = bits;
 	// }
+	
+	public void setBits1(boolean bit){
+		this.bit = bit;
+	}
+	
+	public void setBits2(boolean bit){
+		this.bit = bit;
+	}
 
 	public boolean getAcessaBit(int index) {
 		return this.bits[index];
