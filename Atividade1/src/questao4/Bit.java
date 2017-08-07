@@ -82,7 +82,7 @@ public class Bit {
 		String resp = "";
 		if (bits.length != 0) {
 			for (int k = 0; k < bits.length; k++) {
-				resp = "Bit: "+ bits[k];
+				resp = "Resultado de bit array 1 e bit array 2: "+ bits[k];
 			}
 		} else {
 			resp = "Array é nulo!";

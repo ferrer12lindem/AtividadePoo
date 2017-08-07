@@ -24,7 +24,7 @@ public class BitsMain {
 				System.out.println("Digite o segundo bit: ");
 				b.setBits2(leitor.nextBoolean());
 				bit.add(b);
-			System.out.println("Imprimindo..." + bb.opeAND(b));
+			System.out.println(bb.opeAND(b));
 			}
 			
 
@@ -43,7 +43,7 @@ public class BitsMain {
 				b.setBits1(leitor.nextBoolean());
 				System.out.println("Digite o segundo bit: ");
 				b.setBits2(leitor.nextBoolean());
-			System.out.println("Imprimindo..." + b2);	
+			System.out.println(b2);	
 			}
 			
 		} catch (TamDeBitNaoException e) {
@@ -59,7 +59,7 @@ public class BitsMain {
 				System.out.println("Digite o bit: ");
 				b.setBits1(leitor.nextBoolean());
 				bit.add(b);
-			System.out.println("Imprimindo..." + b3);
+			System.out.println(b3);
 			}
 			
 		} catch (TamDeBitSimException e) {
@@ -69,7 +69,6 @@ public class BitsMain {
 
 		System.out.println("\n\nComparando do equals: " + b.equals(bit) + "\n");
 
-//		System.out.println("toString: " + b.toString());
 		leitor.close();
 	}
 }
