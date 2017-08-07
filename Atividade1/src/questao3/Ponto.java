@@ -1,5 +1,7 @@
 package questao3;
 
+
+
 public class Ponto {
 
 	private int x;

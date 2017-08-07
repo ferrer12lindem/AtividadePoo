@@ -1,20 +1,31 @@
 package questao3;
-import java.util.List;
-import java.util.ArrayList;
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
 
 public class MainPoligono {
 
 	public static void main(String[] args){
 		
-		List<Ponto> pontos = new ArrayList<Ponto>();
-		Poligono poligono = new Poligono();
-		Ponto ponto = new Ponto(3, 6);
-		Ponto ponto1 = new Ponto(2, 8);
-		Ponto ponto2 = new Ponto(12, 67);
 		
-		pontos.add(ponto);
-		pontos.add(ponto1);
-		pontos.add(ponto2);
+	    Scanner leitor = new Scanner(System.in);
+		int quantPontos = Integer.parseInt(JOptionPane.showInputDialog("Quantos pontos: "));
+        
+		Poligono poligono = new Poligono();
+        
+		for(int k=0; k<quantPontos; k++){
+			Ponto p = new Ponto();
+		    System.out.println("Digite o ponto X: ");
+		    p.setX(Integer.parseInt(leitor.nextLine()));
+		    
+		    System.out.println("Digite o ponto y: ");
+		    p.setY(Integer.parseInt(leitor.nextLine()));
+		 
+		    poligono.adicionaPonto(p);
+		}
+		System.out.println("Cálculo do polígono: "+poligono.calcPoligono());
 		System.out.println("Imprimindo..."+poligono.toString());
+		
 	}
 }
+

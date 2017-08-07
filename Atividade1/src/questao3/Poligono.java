@@ -5,18 +5,19 @@ import java.util.ArrayList;
 public class Poligono {
 	
 	List<Ponto> pontos;
-	private int x;
-	private int y;
-	private int poli ;
-	
-	public Poligono(){
-		this.pontos = new ArrayList<Ponto>();
-	}
 	
 	public Poligono(List<Ponto> pontos){
 		this.pontos = pontos;
 	}
 	
+	public Poligono(){
+		this.pontos = new ArrayList<Ponto>();
+	}
+	
+	public List<Ponto> getPontos(){
+		return this.pontos;
+	}
+
 	public void adicionaPonto(Ponto p){
 		pontos.add(p);
 	}
@@ -27,20 +28,31 @@ public class Poligono {
 	
 	public List<Ponto> getPonto(){
 		return this.pontos;
+		
 	}
 	
-	public int calcPoligono(List<Ponto> pontos){
-		int area = 1;
-		for(int k=0; k<pontos.size(); k++){
-			area += k;
-		}
-	return area;
-	}
-	
-	public String toString(int poli){
-		String msg = null;
+	public int calcPoligono(){
+		int[] cordenadasX = new int[pontos.size()];
+		int[] cordenadasY = new int[pontos.size()];
+		int temp = 0;
 		for(Ponto p: pontos){
-		    msg ="Resultado dos cálculos: "+p.toString(); // questao3.Poligono@6bc7c054
+			cordenadasX[temp] = p.getX();
+			cordenadasY[temp] = p.getY();
+			temp++;
+		}
+		int area = 0;
+		for(int k = 0; k < pontos.size() -1; k++){
+			area+= cordenadasX[k]*cordenadasY[k+1] - cordenadasX[k+1] * cordenadasY[k];
+		}
+		
+		return area/2;
+		}
+	
+	public String toString(){
+		String msg = "";
+		Ponto o = new Ponto();
+		for(Ponto p: pontos){
+		    msg ="Vendo comparações: "+p.equals(pontos); // questao3.Poligono@6bc7c054
 		}
 	return msg;
 	}
