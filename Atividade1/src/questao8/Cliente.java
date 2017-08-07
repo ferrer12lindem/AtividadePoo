@@ -20,6 +20,6 @@ public class Cliente extends Pessoa{
     }
     
     public String toString(){
-    	return "\n\nCliente: \n\nNome: "+this.nome+" Código: "+this.codigo+"\n";
+    	return "Cliente: \n\nNome: "+this.nome+"\nCódigo: "+this.codigo+"\n";
     }
 }

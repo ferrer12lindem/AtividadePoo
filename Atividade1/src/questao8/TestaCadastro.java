@@ -44,6 +44,8 @@ public class TestaCadastro {
 		System.out.print("Digite o nome do gerente 3: ");
 		String ger3 = leitor.nextLine();
 		Funcionario gerente3 = new Gerente("Setor de serviços", 2900, ger3);
+//		CadastroPessoas cc = new CadastroPessoas();
+		
 		for(CadastroPessoas c : list){
 
 			c.cadastraPessoa(cliente1);
@@ -55,10 +57,9 @@ public class TestaCadastro {
 			c.cadastraPessoa(gerente1);
 			c.cadastraPessoa(gerente2);
 			c.cadastraPessoa(gerente3);
-
-		list.add(c);
-		}
 		
+		}
+//		cc.imprimeCadastro();
 		cliente1.imprimeDados();
 		cliente2.imprimeDados();
 		cliente3.imprimeDados();

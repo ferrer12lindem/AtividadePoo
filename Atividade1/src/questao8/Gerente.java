@@ -26,6 +26,6 @@ public class Gerente extends Funcionario {
 	}
 	
 	public String toString(){
-		return "Salário: "+this.salario+" Imposto de renda: "+calculaImposto();
+		return "Gerente:\n\nSalário: "+this.salario+"\nÁrea: "+this.area+"\nImposto de renda: "+calculaImposto()+"\n";
 	}
 }

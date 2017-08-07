@@ -19,9 +19,9 @@ public class CadastroPessoas {
 	}
 
 	public String toString() {
-		Pessoa c = new Cliente();
-		Pessoa f = new Funcionario();
-		Pessoa g = new Gerente();
+		Cliente c = new Cliente();
+		Funcionario f = new Funcionario();
+		Gerente g = new Gerente();
 		return "Cliente: " + c.toString() + "\nFuncionário: " + f.toString() + "Gerente: " + g.toString();
 	}
 

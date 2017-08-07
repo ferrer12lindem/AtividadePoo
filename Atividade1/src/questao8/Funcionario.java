@@ -23,6 +23,6 @@ public class Funcionario extends Pessoa{
 	}
 	
 	public String toString(){
-		return "Funcionário:\n\nNome: "+this.nome+"\nSalário: "+this.salario+"\nImposto de renda: "+this.calculaImposto();
+		return "Funcionário:\n\nNome: "+this.nome+"\nSalário: "+this.salario+"\nImposto de renda: "+this.calculaImposto()+"\n\n";
 	}
 }
