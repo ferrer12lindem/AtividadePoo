@@ -18,11 +18,12 @@ public class Retangulo extends Quadrilatero implements FormaGeometrica{
 	}
 	
 	public int calcPerimetro(){
-		Quadrilatero q = new Quadrado();
-		
-		
-		int resp = (2*base)+(2*altura);
+		Quadrilatero q = new Retangulo(altura, altura);
+		int resp = q.areaPerimetro();
 		return resp;
+				
+//		int resp = (2*base)+(2*altura);
+//		return resp;
 	}
 
 	public String toString(){

@@ -18,6 +18,7 @@ public class Quadrado extends Quadrilatero implements FormaGeometrica{
 	
 
 	public Quadrado() {
+	
 	}
 
 

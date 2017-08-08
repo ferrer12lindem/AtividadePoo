@@ -9,7 +9,7 @@ public class Circulo implements FormaGeometrica{
 	}
 	
 	public int areaPerimetro(){
-		int resp = (int) ((2*3.1415926)*raio);
+		int resp = (int) ((2*3.1415)*raio);
 		return resp;
 	}
 	
