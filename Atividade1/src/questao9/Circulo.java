@@ -9,18 +9,15 @@ public class Circulo implements FormaGeometrica{
 	}
 	
 	public int areaPerimetro(){
-		int resp = 0;
-		int area = 0;
-		resp = raio/4;
-		area += resp;
-		return raio;
+		int resp = (int) ((2*3.1415926)*raio);
+		return resp;
 	}
 	
 	public int areaForma(){
-		return 0;
+		return (int) (3.14*(raio*raio));
 	}
 	
 	public String toString(){
-		return "";
+		return "Perímetro: "+areaPerimetro()+"\nÁrea de Forma: "+areaForma();
 	}
 }

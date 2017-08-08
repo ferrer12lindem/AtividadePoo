@@ -5,16 +5,14 @@ public class MainTeste {
 	
     public static void main(String[]args ){
 	
-	ArrayList<Quadrilatero> vetor = new ArrayList<Quadrilatero>();
-    for(Quadrilatero k: vetor){
-    	
+	ArrayList<FormaGeometrica> vetor = new ArrayList<FormaGeometrica>();
 	    // Retângulos
-	Quadrilatero reta1 = new Retangulo(3, 5);
-	Quadrilatero reta2 = new Retangulo(4, 8);
+	FormaGeometrica reta1 = new Retangulo(3, 5);
+	FormaGeometrica reta2 = new Retangulo(4, 8);
 	    
 	    // Quadrados
-	Quadrilatero quadra1 = new Quadrado(5);
-	Quadrilatero quadra2 = new Quadrado(8);
+	FormaGeometrica quadra1 = new Quadrado(5, 34, 7);
+	FormaGeometrica quadra2 = new Quadrado(8, 10, 9);
 	
 	    // Círculos
 	FormaGeometrica circle1 = new Circulo(12);
@@ -24,8 +22,13 @@ public class MainTeste {
     vetor.add(reta2);
     vetor.add(quadra1);
     vetor.add(quadra2);
-    System.out.println("Imprime: "+k.toString());
-       }
+    vetor.add(circle1);
+    vetor.add(circle2);
+    
+ 
+    	System.out.println("Infomrações de Retângulo:\nÁrea de Forma: "+reta1.areaForma()+"\nPerímetro: "+reta1.areaPerimetro()+"\nÁrea de Forma: "+reta2.areaForma()+"\nPerímetro: "+reta2.areaPerimetro());
+    	System.out.println("Informações de Quadrado:\nÁrea de Forma: "+quadra1.areaForma()+"\nPerímetro: "+reta1.areaPerimetro()+"\nÁrea de Forma: "+quadra2.areaForma()+"\nPerímetro: "+reta2.areaPerimetro());
+    	System.out.println("\nInformações de círculo:\nCírculo 1:\nÁrea de Forma: "+circle1.areaForma()+"\nPerímetro: "+circle1.areaPerimetro()+"\nCírculo 2:\nÁrea Forma "+circle2.areaForma()+"\nPerímetro: "+circle2.areaPerimetro());
     }
 }
 

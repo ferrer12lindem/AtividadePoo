@@ -21,6 +21,7 @@ public class BitsMain {
 			for (int k = 0; k < tamArray; k++) {
 				System.out.println("Digite o primeiro bit: ");
 				b.setBits1(leitor.nextBoolean());
+				
 				System.out.println("Digite o segundo bit: ");
 				b.setBits2(leitor.nextBoolean());
 				bit.add(b);
@@ -36,11 +37,11 @@ public class BitsMain {
 		System.out.println("\nOperação OR...\n");
 		
 		try {
-			List<Bit> bt = new ArrayList<Bit>();
 			Bit b2 = b.opeOR(b);
 			for (int k = 0; k < tamArray; k++) {
 				System.out.println("Digite o primeiro bit: ");
 				b.setBits1(leitor.nextBoolean());
+				
 				System.out.println("Digite o segundo bit: ");
 				b.setBits2(leitor.nextBoolean());
 			System.out.println(b2);	
