@@ -2,21 +2,35 @@ package questao9;
 
 public class Quadrado extends Quadrilatero implements FormaGeometrica{
 	
-	public Quadrado(int altura, int abaixo, int acima){
-	super(altura, abaixo, acima, altura);
-
+	private int altura;
+	private int abaixo;
+	private int acima;
+	private int ladoD;
+	
+	public Quadrado(int altura, int abaixo, int acima, int ladoD){
+	super(altura, abaixo, acima, ladoD);
+        this.altura = altura;
+        this.abaixo = abaixo;
+        this.acima = acima;
+        this.ladoD = ladoD;
 	}
 	
 	
 
+	public Quadrado() {
+	}
+
+
+
 	@Override
 	public int areaForma() {
-		int resp = getAltura() *getAltura();
+		int resp = altura *altura;
 		return resp;
 	}
 	
 	public int calcPerimetro(){
-		int resp = getAltura()+getAltura()+getAcima()+getAbaixo();
+		Quadrilatero q = new Quadrado(altura, abaixo, acima, ladoD);
+		int resp = q.areaPerimetro();
 		return resp;
 	}
 	

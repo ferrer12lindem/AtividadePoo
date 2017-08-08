@@ -2,33 +2,38 @@ package questao9;
 
 public abstract class Quadrilatero implements FormaGeometrica {
 
-	private int acima;
-	private int ladoE;
-	private int ladoD;
-	private  int abaixo;
-	private int altura;
-	private int base;
+	protected int acima;
+	protected int ladoE;
+	protected int ladoD;
+	protected int abaixo;
+	protected int altura;
+	protected int base;
     
 	public Quadrilatero(int acima, int ladoE, int ladoD, int abaixo) {
 		this.setAcima(acima);
 		this.ladoE = ladoE;
 		this.ladoD = ladoD;
-		this.setAbaixo(abaixo);
+		this.acima = acima;
+		this.abaixo = abaixo;
 
+	}
+	
+	public Quadrilatero(){
+		
 	}
 
 	public Quadrilatero(int altura2) {
-		this.setAltura(altura2);
+		this.altura = altura2;
 	}
 
 	public Quadrilatero(int base2, int altura2) {
-		this.setBase(base2);
-		this.setAltura(altura2);
+		this.base = base2;
+		this.altura = altura2;
 	}
 
 	@Override
 	public int areaPerimetro() {
-		int result = this.ladoE+this.getAcima()+this.ladoD+this.getAbaixo();
+		int result = this.ladoE+this.acima+this.ladoD+this.abaixo;
 		return result;
 	}
 
